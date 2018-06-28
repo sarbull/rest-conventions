@@ -1,11 +1,12 @@
 # rest-conventions
 
-# GET /api/elements
-## Request
+# Retrieve all
+## GET /api/elements
+### Request
 ```json
 GET /api/elements HTTP/1.1
 ```
-## Response
+### Response
 ```json
 [
   {
@@ -21,15 +22,16 @@ GET /api/elements HTTP/1.1
 ]
 ```
 
-# POST /api/elements
-## Request
+# Create
+## POST /api/elements
+### Request
 ```json
 {
   "name": "HELIUM",
   "atomicNumber": 2
 }
 ```
-## Response
+### Response
 ```json
 {
   "id": 3,
@@ -38,12 +40,13 @@ GET /api/elements HTTP/1.1
 }
 ```
 
-# GET /api/elements/:id
-## Request
+# Retrieve one
+## GET /api/elements/:id
+### Request
 ```json
 GET /api/elements/3 HTTP/1.1
 ```
-## Response
+### Response
 ```json
 {
   "id": 3,
@@ -52,14 +55,15 @@ GET /api/elements/3 HTTP/1.1
 }
 ```
 
-# PATCH /api/elements/:id
-## Request
+# Update one attribute
+## PATCH /api/elements/:id
+### Request
 ```json
 {
   "atomicNumber": 20
 }
 ```
-## Response
+### Response
 ```json
 {
   "id": 3,
@@ -68,15 +72,16 @@ GET /api/elements/3 HTTP/1.1
 }
 ```
 
-# PUT /api/elements/:id
-## Request
+# Update entire entity
+## PUT /api/elements/:id
+### Request
 ```json
 {
   "name": "Helium",
   "atomicNumber": 2
 }
 ```
-## Response
+### Response
 ```json
 {
   "id": 3,
@@ -85,18 +90,20 @@ GET /api/elements/3 HTTP/1.1
 }
 ```
 
-# DELETE /api/elements/:id
-## Request
+# Delete
+## DELETE /api/elements/:id
+### Request
 ```json
 DELETE /api/elements/3 HTTP/1.1
 ```
-## Response
+### Response
 ```json
 HTTP/1.1 204 NO CONTENT
 ```
 
-# POST /api/elements/:id/actions
-## Request
+# Custom actions
+## POST /api/elements/:id/actions
+### Request
 ```json
 {
   "type": "RAISE_CONCENTRATION",
@@ -105,7 +112,7 @@ HTTP/1.1 204 NO CONTENT
   }
 }
 ```
-## Response
+### Response
 ```
 HTTP/1.1 200 OK
 ```
