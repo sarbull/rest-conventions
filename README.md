@@ -10,11 +10,13 @@ GET /api/elements HTTP/1.1
 [
   {
     "id": 1,
-    "name": "Oxygen"
+    "name": "Oxygen",
+    "atomicNumber": 8
   },
   {
     "id": 2,
-    "name": "Carbon"
+    "name": "Carbon",
+    "atomicNumber": 6
   }
 ]
 ```
@@ -23,7 +25,38 @@ GET /api/elements HTTP/1.1
 ## Request
 ```json
 {
-  "name": "Helium"
+  "name": "HELIUM",
+  "atomicNumber": 2
+}
+```
+## Response
+```json
+{
+  "id": 3,
+  "name": "HELIUM",
+  "atomicNumber": 2
+}
+```
+
+# GET /api/elements/:id
+## Request
+```json
+GET /api/elements/3 HTTP/1.1
+```
+## Response
+```json
+{
+  "id": 3,
+  "name": "HELIUM"
+  "atomicNumber": 2
+}
+```
+
+# PATCH /api/elements/:id
+## Request
+```json
+{
+  "atomicNumber": 20
 }
 ```
 ## Response
@@ -31,20 +64,35 @@ GET /api/elements HTTP/1.1
 {
   "id": 3,
   "name": "Helium"
+  "atomicNumber": 20
 }
 ```
 
-# GET /api/elements/:id
+# PUT /api/elements/:id
 ## Request
 ```json
-GET /api/elements/1 HTTP/1.1
+{
+  "name": "Helium"
+  "atomicNumber": 2
+}
 ```
 ## Response
 ```json
 {
-  "id": 1,
-  "name": "Oxygen"
+  "id": 3,
+  "name": "Helium"
+  "atomicNumber": 2
 }
+```
+
+# DELETE /api/elements/:id
+## Request
+```json
+DELETE /api/elements/3 HTTP/1.1
+```
+## Response
+```json
+HTTP/1.1 204 NO CONTENT
 ```
 
 # POST /api/elements/:id/actions
