@@ -47,7 +47,7 @@ GET /api/elements/3 HTTP/1.1
 ```json
 {
   "id": 3,
-  "name": "HELIUM"
+  "name": "HELIUM",
   "atomicNumber": 2
 }
 ```
@@ -63,7 +63,7 @@ GET /api/elements/3 HTTP/1.1
 ```json
 {
   "id": 3,
-  "name": "Helium"
+  "name": "Helium",
   "atomicNumber": 20
 }
 ```
@@ -72,7 +72,7 @@ GET /api/elements/3 HTTP/1.1
 ## Request
 ```json
 {
-  "name": "Helium"
+  "name": "Helium",
   "atomicNumber": 2
 }
 ```
@@ -80,7 +80,7 @@ GET /api/elements/3 HTTP/1.1
 ```json
 {
   "id": 3,
-  "name": "Helium"
+  "name": "Helium",
   "atomicNumber": 2
 }
 ```
