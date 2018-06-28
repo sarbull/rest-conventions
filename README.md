@@ -19,6 +19,21 @@ GET /api/elements HTTP/1.1
 ]
 ```
 
+# POST /api/elements
+## Request
+```json
+{
+  "name": "Helium"
+}
+```
+## Response
+```json
+{
+  "id": 3,
+  "name": "Helium"
+}
+```
+
 # GET /api/elements/:id
 ## Request
 ```json
