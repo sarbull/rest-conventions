@@ -63,7 +63,7 @@ GET /api/elements/3 HTTP/1.1
 ```json
 {
   "id": 3,
-  "name": "Helium",
+  "name": "HELIUM",
   "atomicNumber": 20
 }
 ```
